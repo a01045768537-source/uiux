@@ -73,6 +73,7 @@ ol, li , ul {
 }
 .nature strong {
     color: #0072b8;
+    font-weight: 700;
 }
 .villa h1 {
     margin: 0 0 34px 0;
@@ -99,4 +100,5 @@ ol, li , ul {
 .cycle p strong {
     font-weight: 700;
     text-decoration: underline;
+    color: yellow;
 }
