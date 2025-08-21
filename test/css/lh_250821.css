@@ -1,0 +1,49 @@
+@import url(common.css);
+.future {
+    margin: 186px 0 0 0;
+}
+.future .tit {
+    text-align:  center;
+}
+.future .tit strong {
+    font-weight: 700;
+    color: #0067db;
+}
+.future .tit h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #1d1d1d;
+    margin:  17px 0 11px 0;
+}
+.future .list {
+    margin: 51px 0 0 0;
+}
+.future .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.future .list ul li {
+    width: 297px;
+    height: 246px;
+    color: #fff;
+    border-radius: 20px;
+    padding: 35px 30px 35px 30px;
+}
+.future .list ul li.bg1 {
+    background-color: #04e691;
+}
+.future .list ul li.bg2 {
+    background-color: #007feb;
+}
+.future .list ul li.bg3 {
+    background-color: #a1ccfc;
+}
+.future .list ul li.bg4 {
+    background-color: #005ee0;
+}
+.future .list ul li h2 {
+    font-size: 24px;
+    font-weight: 700; 
+    margin:  0 0 12px 0;
+}
