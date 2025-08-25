@@ -1,0 +1,31 @@
+@import url(common.css);
+
+.Global h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.Global strong {
+    font-weight: inherit;
+    color: #00b900;
+}
+.Global .photo {
+    
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+
+
+
+.Market h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
