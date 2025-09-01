@@ -6,8 +6,6 @@
 header {
     height: 100px;
 }
-header .logo 
-
 header .wrapper {
     display: flex;
     justify-content: space-between;
