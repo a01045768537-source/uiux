@@ -148,7 +148,7 @@ header .gnb ul li a {
     width: 716px;
     overflow: hidden;
     text-overflow: ellipsis;
-
+    white-space: nowrap;
 }
 .community .news .list ul li a span {
     color:rgba(255, 255, 255, 0.8);
