@@ -129,6 +129,10 @@ header .gnb ul li a {
     border-radius: 30px;
     margin: 46px 0 0 0;
 }
+.community .news .tit a:hover {
+    background-color: #fff;
+    color: #B40023;
+}
 .community .news .list {
     width: 869PX;
 }
@@ -149,6 +153,9 @@ header .gnb ul li a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.community .news .list ul li a:hover h3{
+    font-weight: 800;
 }
 .community .news .list ul li a span {
     color:rgba(255, 255, 255, 0.8);
@@ -173,6 +180,10 @@ header .gnb ul li a {
     padding: 10px 29px 10px 29px;
     border-radius: 30px;
 }
+.community .media .tit a:hover {
+    background-color: #fff;
+    color: #B40023;
+}
 .community .media .list {
     margin: 36px 0 0 0;
 }
@@ -196,6 +207,10 @@ header .gnb ul li a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
+}
+.community .media .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
 }
 .community .media .list ul li a h3 {
     font-size: 20px;
@@ -217,4 +232,37 @@ footer {
     padding: 105px 0 185px 0;
     background-color: #2d2d2d;
     color: rgba(255, 255, 255, 0.8);
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .inner .f_nav ul {
+    display: flex;
+    gap: 0 43px;
+}
+footer .inner .f_nav ul li a {
+    display: block;
+}
+footer .inner .f_nav ul li a:hover {
+    text-decoration: underline;
+}
+footer .inner .f_info {
+    margin: 30px 0 30px 0;
+}
+footer .inner .f_info .group {
+    display: flex;
+    gap: 0 28px;
+}
+footer .inner .copyrlght {
+    color:rgba(255, 255, 255, 0.6);
+}
+footer .famlly_site button {
+    width: 188px;
+    line-height: 43px;
+    background-color: #B40023;
+    color: #fff;
+    display: block;
+    text-align: left;
+    padding: 0 0 0 20px;
 }
