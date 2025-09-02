@@ -43,6 +43,15 @@ a {
 ol, li , ul {
     list-style: none; /* 앞에 도형 숫자 삭제 */
 }
+button {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    background: none;
+    border: none;
+}
 * { /* *(와일드카드) 모든 태그 - 여백삭제 */
     margin: 0;
     padding: 0;
