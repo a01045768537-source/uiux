@@ -26,8 +26,47 @@ header .gnb ul li a {
     line-height: 90px;
     padding: 0 20px 0 20px;
 }
+header .util {
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+}
+header .util .weather {
+    padding: 50PX 0 0 0;
+    line-height: 1.1;
+    position: relative;
+}
+header .util .weather::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: url(../images/util_weather.svg) no-repeat left center;
+}
 
-
+header .util .weather strong {
+    display: block;
+    font-weight: 800;
+}
+header .util .weather span {
+    color: rgb(225, 255, 225, 0.8 #fff);
+    font-size: 14px;
+}
+ .sea {
+    position: relative;
+    padding: 25px 0 0 0;
+}
+header .utilx .sea::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: url(../images/util_sea.svg) no-repeat
+}
 
 .visual {
     background: url(../images/visual_bg.jpg) no-repeat center center / cover;
@@ -77,6 +116,255 @@ header .gnb ul li a {
 }
 .visual .life:hover::before {
     background-image : url(../images/life_ov.svg);
+}
+
+.cuiture {
+    position: relative;
+    padding: 153px 0 223px 0;
+}
+.cuiture::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -250px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% + 250px);
+    background-color: #f7f7f7
+}
+.cuiture .tit h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 18px 0;
+}
+.cuiture .list {
+    margin: 40px 0 0 0;
+}
+.cuiture .list ul {
+    display: flex; /* li 좌우 배치 */
+    justify-content: space-between;
+}
+.cuiture .list ul li {
+    /* 100% / 한줄에 li의 갯수 = 100/4 = 25%*,
+     한줄의 사이 여백의 합 24*3=27, 한줄에 li의 갯수 = 72/4= 18*/
+    width:  calc(25% - 18px);
+}
+.cuiture .list ul li a {
+    display: block;
+}
+.cuiture .list ul li a .photo {
+    overflow: hidden;
+    height: 217px;
+}
+.cuiture .listul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.cuiture .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.cuiture .list ul li a h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 18px 0 10px 0;
+}
+.tour.more,
+.cuiture .more {
+    margin: 93px 0 0 0;
+    text-align: center;
+}
+.tour.more a,
+.cuiture .more a {
+    padding: 46px 0 0 0;
+    display: inline-block;
+    font-weight: 800;
+    position: relative;
+}
+.tour .more a::before,
+.cuiture .more a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 22px;
+    width: 1px;
+    background-color: #1D1D1D;
+}
+
+.tour {
+    margin: 106px 0 0 0;
+}
+.tour .tit {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 18px 0;
+}
+.tour .list {
+    margin: 40px 0 0 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 15.87%;
+    height: 383px;
+}
+.tour .list ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0 47px 0; 
+    height: 383px; /* li의 사이즈와 a의 사이즈를 같게 해야함.*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.tour .list ul li.bg1 a {
+    background-image: url(../images/tour1.jpg);
+}
+.tour .list ul li.bg2 a {
+    background-image: url(../images/tour2.jpg);
+}
+.tour .list ul li.bg3 a {
+    background-image: url(../images/tour3.jpg);
+}
+.tour .list ul li.bg4 a {
+    background-image: url(../images/tour4.jpg);
+}
+.tour .list ul li a h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 18px 0;
+}
+.tour .list ul li a p {
+    display: none;
+}
+.tour .list ul li.on {
+    width: 49.52%;
+}
+.tour .list ul li.on a {
+    align-items: flex-start;
+    padding: 0 0 44px 49px; 
+}
+.tour .list ul li.on a p {
+    display: block;
+    margin: 14px 0 0 0;
+}
+
+.community {
+    height: 874px;
+    background: url(../images/community_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+    padding: 156px 0 0 0;
+}
+.community .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.community .tit h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 18px 0;
+}
+.community .inner {
+    display: flex;
+    gap: 0 12px;
+    align-items: flex-end;
+}
+.community .inner .notice {
+    backdrop-filter: blur(10px);
+    background-color: rgb(1, 32, 63, 0.6);
+    width: 548px;
+    height: 383px;
+    border-radius: 10px;
+    padding: 42px 40px 0 40px; /* 충돌때문에 아래여백은 절대 안줌.*/
+    position: relative;
+}
+.community .inner .notice h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+.community .inner .notice ul {
+    margin: 24px 0 0 0;
+}
+.community .inner .notice ul a {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0 11px 0;
+}
+.community .inner .notice ul a h4 {
+    width: calc(100% - 105px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.community .inner .notice ul a span {
+    color: rgb(255, 255, 255, 0.8);
+}
+.community .inner .notice .more {
+    position: absolute;
+    right: 40px;
+    top: 42px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgb(225, 255, 225, 0.8);
+    border-radius: 50%;
+    background: url(../images/community_notice.svg) no-repeat center center;
+}
+.community .inner .notice .more span {
+    display: none;
+}
+/* notice over 스타일 */
+.community .inner .notice:hover {
+    background-color: #fff;
+    color: #1D1D1D;
+}
+.community .inner .notice:hover ul li a span{
+    color: #666;
+}
+.community .inner .notice:hover .more {
+    border-color: #1F4993;
+    background-color: #1F4993;
+    background-image: url(../images/community_notice_over.svg);
+}
+.community .inner .notice:hover ul li a:hover h4 {
+    color: #1F4993;
+    font-weight: 800;    
+}
+.community .inner .notice:hover ul li a:hover span {
+    color: #1F4993;
+}
+.community .inner .service {
+    width: 312px;
+}
+.community .inner .service ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 12px;
+}
+.community .inner .service ul li {
+    width: calc(50% - 6px);
+}
+.community .inner .service ul li a {
+    height: 150px;
+    backdrop-filter: blur(10px);
+    background-color: rgb(1, 32, 63, 0.6);
+    border-radius: 10px;
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.3;
+    padding: 28px 0 0 27px;
 }
 
 footer {
