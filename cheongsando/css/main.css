@@ -365,8 +365,192 @@ header .utilx .sea::before {
     font-weight: 800;
     line-height: 1.3;
     padding: 28px 0 0 27px;
+    position: relative;
+}
+.community .inner .service ul li a::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.community .inner .service ul li.icon1 a::after {
+    background-image: url(../images/community_service01.svg);
+}
+.community .inner .service ul li.icon2 a::after {
+    background-image: url(../images/community_service02.svg);
+}
+.community .inner .service ul li.icon3 a::after {
+    background-image: url(../images/community_service03.svg);
+}
+.community .inner .service ul li.icon4 a::after {
+    background-image: url(../images/community_service04.svg);
+}
+.community .inner .service ul li a:hover {
+    background-color: #1F4993;
 }
 
 footer {
-    margin: 1000px 0 0 0;
+    padding: 64px 0 66px 0;
+    background-color: #1d1d1d;
+    color: rgb(255, 255, 255, 0.8);
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .left_area .f_nav ul {
+    display: flex;
+    gap:  0 34px;
+}
+footer .left_area .f_nav ul li {
+    position: relative;
+}
+footer .left_area .f_nav ul::after {
+    content: "";
+    position: absolute;
+    right: -19px;
+    top: 5px;
+    width: 1px;
+    height: 12px;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+footer .left_area .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .left_area .f_nav ul li.Privacy a {
+    font-weight: 800;
+}
+footer .left_area .f_nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(255, 255, 255, 0.4);
+    transition: 0.5px;
+    opacity: 0;
+}
+footer .left_area .f_nav ul li a:hover::after {
+    opacity: 1;
+}
+footer .left_area .f_info {
+    margin: 22px 0 27px 0;
+    display: flex;
+    gap: 0 25px;
+}
+footer .left_area .copyright .no {
+    font-size: 17px;
+    color: rgb(255, 255, 255, 0.6);
+    position: relative;
+}
+footer .left_area .copyright .no span {
+    position: relative;
+}
+footer .left_area .copyright .no span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+footer .right_area {
+    margin: 13px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 12px;
+}
+footer .right_area .family_site {
+    position: relative;
+}
+footer .right_area .family_site button {
+    width: 180px;
+    height: 58px;
+    background: #434343;
+    text-align: left;
+    padding: 0 0 0 18px;
+    position: relative;
+}
+footer .right_area .family_site button::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    width: 21px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+footer .right_area .family_site button.family_open::after {
+    background-image: url(../images/family_open.svg);
+}
+footer .right_area .family_site button.family_close::after {
+    background-image: url(../images/family_ciose.svg);
+}
+footer .right_area .family_site button.family_close {
+    display: none;
+}
+footer .right_area .family_site .family_detail {
+    position: absolute;
+    left: 0;
+    bottom: 59px;
+    width: 100%;
+    background-color: #434343;
+    padding: 24px 0 27px 18px;
+    display: none;
+}
+footer .right_area .family_site .family_detail ul li a {
+    display: block;
+    padding: 3px 0 3px 0;
+}
+footer .right_area .family_site .family_detail ul li a:hover {
+    font-weight: 800;
+}
+footer .right_area .family_site .family_detail ul li a span {
+    position: relative;
+}
+footer .right_area .family_site .family_detail ul li a span::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: -2px;
+    width: 25px;
+    height: 25px;
+    background: url(../images/family_blank.svg) no-repeat center center;
+}
+/*family_site가 열렸을 때 open 클래스가 추가 됐을 때*/
+footer .right_area .family_site.open .family_detail {
+    display: block;
+}
+footer .right_area .family_site.open button.family_close {
+    display: block;
+}
+footer .right_area .family_site.open button.family_open {
+    display: none;
+}
+footer .right_area .top {
+    width: 62px;
+    height: 50px;
+    background-color: #1F4993;
+    font-size: 17px;
+    padding: 1px 0 0 0 ;
+    position: relative;
+}
+footer .right_area .top::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    background-image: url(../images/top.svg) no-repeat center;
+}
+footer .right_area .top:hover {
+    color: #D9E74C;
 }
