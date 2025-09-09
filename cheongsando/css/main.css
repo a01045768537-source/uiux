@@ -209,10 +209,13 @@ header .utilx .sea::before {
 .tour .list ul {
     display: flex;
     justify-content: space-between;
+    gap: 0 24px;
 }
 .tour .list ul li {
     width: 15.87%;
     height: 383px;
+    overflow: hidden;
+    flex: 1 1 0%;
 }
 .tour .list ul li a {
     display: flex;
@@ -246,9 +249,11 @@ header .utilx .sea::before {
 }
 .tour .list ul li a p {
     display: none;
+    white-space: nowrap;
 }
 .tour .list ul li.on {
     width: 49.52%;
+    flex: 3 1 0%;
 }
 .tour .list ul li.on a {
     align-items: flex-start;
