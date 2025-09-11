@@ -81,3 +81,14 @@ button {
     margin: -1px;
     overflow: hidden;
 }
+@media screen and (max-width:768px){
+            body {
+                font-size: 16px;
+            }
+
+
+            .wrapper {
+                width: auto;
+                margin: 0 16px;
+            }
+}
