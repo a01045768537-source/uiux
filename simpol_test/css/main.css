@@ -93,7 +93,7 @@ header .inner .shop::before {
 }
 .flower .list ul li a {
     display: block;
-}
+} 
 .flower .list ul li.bg1 a {
     background-image: url(../images/flower01.jpg);
     display: block;
