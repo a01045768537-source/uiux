@@ -2,6 +2,92 @@
 @import url(fonts.css);
 @import url(common.css);
 
+header {
+    height: 90px;
+    position: absolute; /*wrap를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+header .logo a {
+    display: block;
+    width: 165px;
+    height: 64px;
+    background: url(../images/logo.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_open, 
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+}
+header .gnb .gnb_wrap ul a {
+    display: block;
+    line-height: 90px;
+    font-size: 17px;
+    padding: 0 28px 0 28px;
+}
+header .util {
+    display: flex;
+    gap: 0 2px;
+}
+header .util .mypage,
+header .util .lang .lang_open {
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+header .util .mypage {
+    background-image: url(../images/util_mypage.svg);
+}
+header .util .lang .lang_open {
+    background-image: url(../images/util_lang.svg);
+}
+@media screen and (max-width:768px){
+                            header {
+                                height: 90px;
+                                padding: 0 0 0 20px;
+                            }
+                            header .logo a {
+                                width: 83px;
+                                height: 33px;
+                            }
+                            header .gnb .gnb_open {
+                                display: block;
+                                width: 56px;
+                                height: 56px;
+                                background: url(../images/gnb_oppen.svg) no-repeat center center;
+                            }
+                            header .gnb .gnb_wrap {
+                                display: none;
+                            }
+                            header .util {
+                                display: none;
+                                gap: 0 2px;
+                            }
+                            header .util .mypage,
+                            header .util .lang .lang_open {
+                                width: 40px;
+                                height: 40px;
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                            }
+                            header .util .mypage {
+                                background-image: url(../images/util_mypage.svg);
+                            }
+                            header .util .lang .lang_open {
+                                background-image: url(../images/util_lang.svg);
+                            }
+}/*@media*/
+
 .visual {
     position: relative; /*btn_wrap의 정렬의 기준*/
 }
@@ -57,7 +143,8 @@
     background-image: url(../images/visual_prev.svg);
     transform: rotate(180deg);
 }
-@media screen and (max-width:768px){ 
+@media screen and (max-width:768px){
+
                                     .visual .swiper-slide {
                                         align-items: center; /*???????????*/
                                     }
@@ -95,7 +182,8 @@
                                         background-image: url(../images/visual_prev.svg);
                                         transform: rotate(180deg);
                                     }
-}
+
+}/*@media*/
 
 .biz {
     margin: 213px 0 40px 0 ;
@@ -136,26 +224,253 @@
     overflow: hidden;
     height: 500px;
     border-radius: 30px;
+    position: relative;
 }
-.biz .list ul li a .txt {
-    position: absolute;
-    left: 50px;
-    width: calc(100% - 100px);
-    bottom: 50px;
-    color: #fff;
-}
+
 .biz .list ul li a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+.biz .list ul li a .txt {
+    position: absolute;
+    left: 50px;
+    width: calc(100% - 100px);
+    bottom: 0;
+    color: #fff;
+    transition: 0.5s;
+}
+.biz .list ul li a:hover .txt {
+    bottom: 50px;
+}
+
 .biz .list ul li a .txt h3 {
     font-size: 32px;
 }
 .biz .list ul li a .txt p {
-    display: none;
+    opacity: 0;
+    margin: 16px 0 0 0 ;
+    color: rgba(255, 255, 255, 0.8);
+    transform: 0.5s;
+}
+.biz .list ul li a:hover .txt p {
+    opacity: 1;
 }
 
+
+/* a에 마우스를 오버했을 때*/ 
+
+.biz .list ul li a .photo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #004289;
+    opacity: 0;
+    transition: 0.5s;
+}
+.biz .list ul li a:hover .photo::before {
+   opacity: 0.9;
+}
+
+@media screen and (min-width:768px){
+    .biz .list ul li a:hover .photo::before {
+        opacity: 0.9;
+    }
+    .biz .list ul li a:hover .txt {
+        bottom: 50px;
+    }
+    .biz .list ul li a:hover .txt p {
+        opacity: 1;
+    }
+
+}
+@media screen and (max-width:768px){ 
+                                        
+                                    .biz {
+                                        margin: 110px 0 0 0 ;
+                                    }
+                                    .biz .wrapper {
+                                        display: block;
+                                    }
+                                    .biz .tit {
+                                        position: relative; /*sticky > relative*/
+                                        top: auto;
+                                    }
+                                    .biz .list {
+                                        width: auto;
+                                        padding: 0;
+                                    }
+                                    .biz .list ul {
+                                        flex-wrap: nowrap;/* 여러줄 허용*/
+                                        flex-direction: column;
+                                        gap: 16px 0; /*위아래, 좌우*/
+                                    }
+                                    .biz .list ul li {
+                                        width: auto; /*?????*/
+                                        /*
+                                        100 / 한줄에 나오는 li의 갯수 = 100/2 = 50%
+                                        한 줄의 여백의 합 / 한줄에 나오는 li의 갯수 = 24/2 = 12px
+                                        */
+                                    }
+                                    .biz .list ul li:nth-child(odd) {
+                                        transform: translateY(0);
+                                    }
+                                    .biz .list ul li a .photo {
+                                        height: 150px;
+                                        border-radius: 10px;
+                                    }
+                                    .biz .list ul li a .txt {
+                                        left: 0;
+                                        width: 100%;
+                                        bottom: 15px;
+                                        text-align: center;
+                                    }
+                                    .biz .list ul li a .txt h3 {
+                                        font-size: 24px;
+                                    }
+                                    .biz .list ul li a .txt h3 br {
+                                        display: none;
+                                    }
+                                    .biz .list ul li a .txt p {
+                                        display: none;
+                                    }
+
+}/*@media*/
+
+.notice {
+    margin: 130px 0 0 0;
+    background-color: #D0CCCD;
+    padding: 158px 0 121px 0;
+}
+.notice .wrapper {
+    position: relative;
+}
+.notice .list {
+    margin: 40px 0 0 0;
+}
+.notice .list ul li {
+    margin: 0 0 24px 0;
+}
+.notice .list ul li:last-child {
+    margin-bottom: 0;
+}
+.notice .list ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px 20px 30px;
+}
+/*오버했을 때*/
+.notice .list ul li a:hover {
+    background-color: #004289;
+    color: #fff;
+}
+.notice .list ul li a .inner h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice .list ul li a .inner {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    width: calc(100% - 125px);
+}
+.notice .list ul li a .inner strong {
+    display: block;
+    padding: 4px 4px 4px 4px ;
+    background-color: #515151;
+    border-radius: 5px;
+    color: #fff;
+}
+.notice .list ul li a:hover .inner strong {
+    background-color: #fff;
+    color: #1d1d1d;
+}
+.notice .moer {
+    position: absolute;
+    right: -3px;
+    top: 27px;
+
+}
+.notice .moer a {
+    display: block;
+    padding: 0 30px 0 0;
+}
+.notice .moer a::after {
+    content: "";
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/notice_moer.svg) no-repeat center center;
+}
+.notice .moer a:hover::after {
+    animation: moer 2s linear infinite;
+}
+@keyframes moer {
+    0% {transform: rotate(0deg) }
+    100% {transform: rotate(360deg)}
+}
+
+@media screen and (max-width:768px){
+                .notice {
+                    margin: 70px 0 0 0;
+                    padding: 107px 0 74px 0;
+                }
+                .notice .tit {
+                    width: calc(100%-45px);
+                }
+                .notice .list {
+                    margin: 35px 0 0 0;
+                }
+                .notice .list ul li {
+                    margin: 0 0 10px 0;
+                }
+                .notice .list ul li:last-child {
+                    display: none;
+                }
+                .notice .list ul li a {
+                    display: block;
+                }
+                .notice .list ul li a .inner h3 {
+                    margin: 10px 0 10px 0;
+                    white-space: wrap;
+                    overflow: visible;
+                }
+                
+                .notice .list ul li a .inner {
+                    display: block;
+                    font-size: 16px;
+                }
+                .notice .list ul li a .inner strong {
+                    display: inline-block;
+                }
+                .notice .moer a {
+                    padding: 0;
+                    width: 29px;
+                    height: 29px;
+                }
+                .notice .moer a::after {
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .notice .moer a span {
+                    display: none;
+                }
+                
+}
 
 
 footer {
