@@ -46,4 +46,34 @@ $(document).ready(function(){
             scrollTop : 0
         }, 500)
     })
+
+    let scrolling
+    $('header').on('mouseenter', function(){
+        $(this).addClass('fixed')
+        //console.log('header에 오버함')
+    })
+    $('header').on('mouseleave', function(){
+        //console.log("올렸다가 내림")
+        if(scrolling <= 0){
+            //console.log('스크롤 값은 0이거나 0보다 작다')
+            $(this).removeClass('fixed')
+        }
+    })
+
+    scroll_chk()
+    
+    function scroll_chk(){
+        scrolling = $(window).scrollTop()
+        //스크롤 값이 0보다 크면 header에 fixed 클래스를 추가한다.
+        if(scrolling > 0){
+            console.log('0보다 크다')
+            $('header').addClass('fixed')
+        }else{
+            console.log('0이다')
+            $('header').removeClass('fixed')
+        }
+    }
+    $(window).scroll(function(){
+        scroll_chk()
+    })
 })//맨끝

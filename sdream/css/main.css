@@ -14,12 +14,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px 0 20px;
+    transition: 0.3s;
 }
 header .logo a {
     display: block;
     width: 165px;
     height: 64px;
     background: url(../images/logo.svg) no-repeat center center / contain;
+    transition: 0.3s;
 }
 header .gnb .gnb_open, 
 header .gnb .gnb_close {
@@ -47,10 +49,33 @@ header .util .lang .lang_open {
 }
 header .util .mypage {
     background-image: url(../images/util_mypage.svg);
+    transition: 0.3s;
 }
 header .util .lang .lang_open {
     background-image: url(../images/util_lang.svg);
+    transition: 0.3s;
 }
+/* header에 fixed가 추가 됐을 때*/
+header.fixed {
+    background-color: #fff;
+    color: #1d1d1d;
+    position: fixed;
+    min-width: 1320px;
+}
+header.fixed .logo a {
+    background-image: url(../images/logo_b.svg);
+}
+header.fixed .util .mypage {
+    background-image: url(../images/person2.svg);
+}
+header.fixed .util .lang .lang_open {
+    background-image: url(../images/language2.svg);
+}
+
+
+
+
+
 @media screen and (max-width:768px){
                             header {
                                 height: 90px;
@@ -66,13 +91,6 @@ header .util .lang .lang_open {
                                 height: 56px;
                                 background: url(../images/gnb_oppen.svg) no-repeat center center;
                             }
-                            header .gnb .gnb_wrap {
-                                display: none;
-                            }
-                            header .util {
-                                display: none;
-                                gap: 0 2px;
-                            }
                             header .util .mypage,
                             header .util .lang .lang_open {
                                 width: 40px;
@@ -86,6 +104,16 @@ header .util .lang .lang_open {
                             header .util .lang .lang_open {
                                 background-image: url(../images/util_lang.svg);
                             }
+                            header .gnb .gnb_wrap {
+                                display: none;
+                            }
+                            header .util {
+                                display: none;
+                            }
+                            header.fixed .gnb .gnb_open {
+                                background-image: url(../images/gnb_oppen_b.svg);
+                            }
+                            
 }/*@media*/
 
 .visual {
