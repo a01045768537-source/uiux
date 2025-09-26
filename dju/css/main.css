@@ -1,0 +1,19 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.notice {
+    margin: 171px 0 0 0;
+}
+.notice .tit strong {
+    color: #004EA2;
+    margin: 0 0 13px 0;
+}
+.notice .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 46px 0;
+}
+.notice .tit a {
+    color: #004EA2;
+}
