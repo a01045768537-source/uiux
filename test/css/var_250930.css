@@ -1,0 +1,284 @@
+@import url(common.css);
+
+
+
+
+.test {
+    margin: 50px 0 0 0;
+}
+.test h2 {
+    font-size: 40px;
+}
+.test h2 strong {
+    font-size: 20px;
+}
+.test h3 {
+    font-size: 2.5em;
+}
+.test h3 strong {
+    font-size: 2em;
+}
+.test h4 {
+    font-size: 2.5rem;
+}
+.test h4 strong {
+    font-size: 2rem;
+}
+.test h5 {
+    font-size: 2vw;
+}
+.test h5 strong {
+    font-size: 1vw;
+}
+.test h6 {
+    font-size: calc(24px, 3vw, 40px);
+}
+
+
+
+
+.news {
+    margin: 227px 0 0 0;
+}
+.news .tit h2 {
+    font-size: var(--tit-font-size);
+    color: var(--tit-color);
+    line-height: var(--tit-line-height);
+    font-weight: var(--bold-weight);
+    margin: 0 0 17px 0;
+}
+.news .tit h2 span {
+    display: block;
+}
+.news .wrapper {
+    display: flex;
+    position: relative;
+}
+.news .tit {
+    width: 34%;
+}
+.news .list {
+    width: 66%;
+}
+.news .list ul li {
+    border-bottom: 1px solid #1d1d1d;
+}
+.news .list ul li:first-child {
+    border-top: 1px solid #1d1d1d;
+}
+.news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 0 34px 0;
+}
+.news .list ul li a h3 {
+    font-size: var(--h3-font-size);
+    color: var(--tit-color);
+    line-height: var(--tit-line-height);
+    font-weight: var(--bold-weight);
+
+    width: calc(100% - 125px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.news .more {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.news .more a {
+    display: flex;
+    align-items: center;
+    gap: 0 11px;
+}
+.news .more a i {
+    width: 7px;
+}
+.news .more a i svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width:768px){
+                        .news {
+                            margin: 85px 0 0 0;
+                        }
+                        .news .tit h2 {
+                            margin: 0;
+                        }
+                        .news .tit h2 span {
+                            display: none;
+                        }
+                        .news .tit p {
+                            display: none;
+                        }
+                        .news .wrapper {
+                            display: block;
+                        }
+                        .news .tit {
+                            width: auto;
+                        }
+                        .news .list {
+                            width: auto;
+                            margin: 41px 0 0 0;
+                        }
+                        .news .list ul li a {
+                            display: block;
+                            padding: 15px 0 15px 0;
+                        }
+                        .news .list ul li a h3 {
+                            width: auto;
+                            white-space: wrap;
+                            overflow: visible;
+                        }
+                        .news .more {
+                            left: auto;
+                            right: 0;
+                            bottom: auto;
+                            top: 0;
+                        }
+                        .news .more a {
+                            justify-content: center;
+                            gap: 0;
+                            width: 25px;
+                            height: 25px;
+                            border: 1px solid #1d1d1d;
+                            border-radius: 50%;
+                        }
+                        .news .more a span {
+                            display: none;
+                        }
+}
+
+
+
+
+
+.notice {
+    margin: 198px 0 0 0;
+    padding: 164px 0 104px 0;
+    background-color: #2d2d2d;
+    color: rgba(255, 255, 255, 0.8);
+}
+.notice .tit h2 {
+    font-size: var(--tit-font-size);
+    color: #fff;
+    line-height: var(--tit-line-height);
+    font-weight: var(--bold-weight);
+    margin: 0 0 17px 0;
+}
+.notice .tit h2 span {
+    display: block;
+}
+.notice .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.notice .list {
+   max-width: 831px;
+   width: calc(100% - 245px);
+}
+.notice .list ul li {
+    border-bottom: 1px solid #fff;
+}
+.notice .list ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 0 34px 0;
+}
+.notice .list ul li:first-child {
+    border-top: 1px solid #fff;
+}
+.notice .list ul li a h3 {
+    font-size: var(--h3-font-size);
+    color: var(--tit-color);
+    line-height: var(--tit-line-height);
+    font-weight: var(--bold-weight);
+    color: #fff;
+
+    width: calc(100% - 125px);
+    /* 한줄제한 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+.notice .more {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.notice .more a {
+    display: flex;
+    align-items: center;
+    gap: 0 11px;
+}
+.notice .more a i {
+    width: 7px;
+}
+.notice .more a i svg {
+    width: 100%;
+    height: 100%;
+}
+.notice .more a i svg path {
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+
+@media screen and (max-width:768px){
+
+                        .notice {
+                            margin: 79px 0 0 0;
+                            padding: 110px 0 110px 0;
+                        }
+                        .notice .tit h2 {
+                            margin: 0;
+                        }
+                        .notice .tit h2 span {
+                            display: none;
+                        }
+                        .notice .tit p {
+                            display: none;
+                        }
+                        .notice .wrapper {
+
+                            flex-direction: column;
+                            gap: 62px 0;
+                        }
+                        .notice .list {
+                        max-width: 100%;
+                        width: auto;
+                        }
+                        .notice .list ul li a {
+                            align-items: flex-start;
+                            flex-direction: column;
+                            padding: 15px 0 15px 0;
+                        }
+                        .notice .list ul li:first-child {
+                            border-top: 1px solid #fff;
+                        }
+                        .notice .list ul li a h3 {
+                            width: auto;
+                            /* 한줄제한 */
+                            overflow: visible;
+                            white-space: wrap;
+                        }
+                        .notice .more {
+                            position: relative;
+                            left: auto;
+                            bottom: auto;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        .notice .more a {  
+                            background-color: #fff;
+                            border-radius: 20px;
+                            padding: 7px 16px 6px 30px;
+                            color: #1d1d1d;
+                        }
+}
