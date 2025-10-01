@@ -1,0 +1,275 @@
+@import url(common.css);
+
+:root {
+    --header-h: 100px
+}
+@media screen and (max-width:1.24px){ 
+    :root {
+        --header-h: 72px
+    }
+}
+
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--header-h);
+    color: #fff;
+    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    width: 61px;
+    height: 62px;
+    background: url(../images/menu_logo.svg) no-repeat center center / cover;
+}
+header .util {
+    display: flex;
+    gap: 0 10px;
+}
+header .util .lang .lang_open {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .util .lang .lang_open i {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+header .util .search .search_open {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .util .search .search_open i {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+@media screen and (min-width:1025px){
+
+}
+
+@media screen and (min-width:769px){
+    header .gnb .gnb_open,
+    header .gnb .gnb_close {
+        display: none; /* pc 버전 숨김 */
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        font-size: 22px;
+        font-weight: 800;
+        line-height: var(--header-h);
+        padding: 0 28px 0 28px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+        position: absolute;
+        left: 0;
+        top: var(--header-h);
+        width: 100%;
+        padding: 22px 0 0 0;
+        display: none;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+        display: block;
+        padding: 5px 0 5px 0;
+        text-align: center;
+        color: #1d1d1d;
+    }
+
+    /*메뉴가 열렸을 때*/
+    
+    header.menu_over {
+        color: #1d1d1d;
+    }
+    header.menu_over::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 290px;
+        background-color: #fff;
+    }
+    header.menu_over::after {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: var(--header-h);
+        height: 1px;
+        background-color: #1d1d1d;
+    }
+    header.menu_over .logo a {
+        background-image: url(../images/menu_logo_o.svg);
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth1 > li.over > a {
+        color: #00B2A3;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth1 > li.over > a span {
+        position: relative;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth1 > li.over > a span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        z-index: 10;
+        width: 100%;
+        height: 3px;
+        background-color: #00B2A3;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+        display: block;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a:hover {
+        text-decoration: underline;
+        color: #00B2A3;
+    }
+    header.menu_over .util .lang .lang_open i svg path{
+        fill: #1d1d1d;
+    }
+    header.menu_over .util .search .search_open i svg path{
+        fill: #1d1d1d;
+    }
+
+}/*@media*/
+
+@media screen and (max-width:1024px){
+                        header {
+                            padding: 0 23px 0 23px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        header .logo a {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        header .gnb .gnb_open {
+                            width: var(--header-h);
+                            height: var(--header-h);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        header .gnb .gnb_open i {
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                        }
+                        header .gnb .gnb_wrap {
+                            display: none;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100dvh;
+                            background-color: #fff;
+                            color: #1d1d1d;
+                            padding: 71px 0 0 0;
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li > a {
+                            display: block;
+                            padding: 14px 57px 14px 16px;
+                            font-size: 20px;
+                            font-weight: 800;
+                            position: relative;
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li > a::after {
+                            content: "";
+                            position: absolute;
+                            right: 43px;
+                            top: 25px;
+                            width: 16px;
+                            height: 9px;
+                            background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.00011 2.65376L1.72282 8.93105C1.55726 9.0966 1.36233 9.1773 1.13803 9.17313C0.913585 9.16883 0.718586 9.0839 0.553031 8.91834C0.387475 8.75265 0.304696 8.55765 0.304696 8.33334C0.304696 8.10903 0.387475 7.91404 0.553031 7.74834L6.93282 1.35584C7.08352 1.20514 7.25233 1.09348 7.43928 1.02084C7.62622 0.9482 7.81317 0.91188 8.00011 0.91188C8.18706 0.91188 8.374 0.9482 8.56095 1.02084C8.74789 1.09348 8.91671 1.20514 9.0674 1.35584L15.4601 7.74834C15.6257 7.91404 15.7063 8.11119 15.702 8.3398C15.6977 8.56841 15.6127 8.76549 15.4472 8.93105C15.2816 9.09661 15.0866 9.17938 14.8622 9.17938C14.6379 9.17938 14.443 9.09661 14.2774 8.93105L8.00011 2.65376Z' fill='%232D2D2D'/%3E%3C/svg%3E%0A");
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+                            background-color: #fff;
+                            padding: 18px 38px 18px 38px;
+                            display: none;
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li > ul {
+                            background-color: #F7F7F7;
+                            padding: 15px 38px 15px 38px;
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li > ul > a {
+                            display: block;
+                            padding: 5px 0 5px 0;
+                            position: relative;
+                        }   
+                        header .gnb .gnb_close {
+                            display: none;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: var(--header-h);
+                            height: var(--header-h);
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        header .gnb .gnb_close i {
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                        }
+                        header .util {
+                            position: absolute;
+                            right: var(--header-h);
+                            top: 0;
+                        }
+                        header .util .lang {
+                            display: none;
+                        }
+                        header .util .search .search_open {
+                            width: 30px;
+                            height: var(--header-h)
+                        }
+                        header .util .search .search_open i {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        /* 메뉴가 열렸을 때 */
+                        header.menu_open .gnb .gnb_wrap {
+                            display: block;
+                        }
+                        header.menu_open .gnb .gnb_close {
+                            display: flex;
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li.open > a::after  {
+                            transform: rotate(180deg);
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li.open > ul.depth2 {
+                            display: block;
+                        }
+
+
+
+}
+
+
+.visual {
+    height: 100dvh;
+    background: url(../images/menu_visual.jpg) no-repeat center center / cover;
+}
