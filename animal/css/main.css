@@ -47,6 +47,22 @@ header .util .mypage i {
     display: block;
     width: 18px;
 }
+header {
+    transition: background-color 0.5s, color 0.5s, fill 0.5s;
+}
+header .logo a {
+    transition: background-image 0.5s;
+}
+header.fixed{
+    background-color: var(--color-white);
+    color: var(--color-title);
+    fill: var(--color-basic);
+    border-bottom: 1px solid var(--color-line2);
+}
+header.fixed .logo a {
+    background-image: url(../images/logo.svg);
+}
+
 
 /*************시작 : pc버전 메뉴*********/
 
@@ -112,7 +128,7 @@ header .util .mypage i {
         font-weight: var(--font-weight-bold);
     }
     header .gnb .gnb_wrap ul.depth1 > li.over > ul.depth2 {
-        display: block;
+       display: block !important;
     }
     
 }
@@ -123,6 +139,7 @@ header .util .mypage i {
     header .gnb .gnb_wrap ul.depth1 > li > a {
         font-size: 20px;
     }
+
 }  
 
 /*************끝 : pc버전 메뉴*********/
@@ -130,12 +147,12 @@ header .util .mypage i {
 @media screen and (max-width:1024px){
                 header {
                     padding-right: 0;
-                    height: clamp(56px, 9vw, 90px);
+                    height: clamp(var(--header-ver));
                 }
                 header .logo a {
                     /*width: 145px;
                     height: 22px;*/
-                    width: clamp(145px, 2vw, 200px);
+                    width: clamp(145px, 20vw, 200px);
                 }
                 header .util {
                     display: none;
@@ -152,19 +169,96 @@ header .util .mypage i {
                     width: 36.16px;
                 }
                 header .gnb .gnb_wrap {
-                    display: none;
+                    /*display: none;*/
                     position: absolute;
-                    right: 0;
+                    right: -110%;
                     top: 0;
                     width: 100%;
                     height: 100dvh;
                     background-color: var(--color-white);
                     color: var(--color-basic);
                     fill: var(--color-basic);
+                    transition: right 0.5s;
+                }
+                header .gnb .gnb_wrap ul.depth1{
+                    margin: var(--header-ver) 0 0 0;
+                    height: calc(100dvh - var(--header-ver));
+                    overflow-y: auto;
+                    padding: 17px 0 0 0;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li > a {
+                    display: block;
+                    font-size: 20px;
+                    font-weight: var(--font-weight-bold);
+                    line-height: var(--line-height-title);
+                    color: var(--color-title);
+                    padding: 16px 60px 16px var(--wrapper-margin);
+                    position: relative;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li.open > a {
+                    color: var(--color-main);
+                }
+                header .gnb .gnb_wrap ul.depth1 > li > a::after {
+                    content: "";
+                    position: absolute;
+                    right: var(--wrapper-margin);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 15px;
+                    height: 8px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99996 6.33906L13.5125 0.826562C13.7 0.639062 13.9187 0.548437 14.1687 0.554687C14.4187 0.560937 14.6375 0.657812 14.825 0.845312C15.0125 1.03281 15.1062 1.25156 15.1062 1.50156C15.1062 1.75156 15.0125 1.97031 14.825 2.15781L9.06871 7.93281C8.91871 8.08281 8.74996 8.19531 8.56246 8.27031C8.37496 8.34531 8.18746 8.38281 7.99996 8.38281C7.81246 8.38281 7.62496 8.34531 7.43746 8.27031C7.24996 8.19531 7.08121 8.08281 6.93121 7.93281L1.15621 2.15781C0.968711 1.97031 0.878086 1.74844 0.884336 1.49219C0.890586 1.23594 0.987461 1.01406 1.17496 0.826563C1.36246 0.639063 1.58121 0.545313 1.83121 0.545313C2.08121 0.545313 2.29996 0.639063 2.48746 0.826563L7.99996 6.33906Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                    transition: 0.5s;
+                }      
+                header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
+                    transform: translateY(-50%) rotate(180deg);
+                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.00004 2.66094L2.48754 8.17344C2.30004 8.36094 2.08129 8.45156 1.83129 8.44531C1.58129 8.43906 1.36254 8.34219 1.17504 8.15469C0.987538 7.96719 0.893789 7.74844 0.893789 7.49844C0.893789 7.24844 0.987538 7.02969 1.17504 6.84219L6.93129 1.06719C7.08129 0.917187 7.25004 0.804687 7.43754 0.729687C7.62504 0.654687 7.81254 0.617187 8.00004 0.617187C8.18754 0.617187 8.37504 0.654687 8.56254 0.729687C8.75004 0.804687 8.91879 0.917187 9.06879 1.06719L14.8438 6.84219C15.0313 7.02969 15.1219 7.25156 15.1157 7.50781C15.1094 7.76406 15.0125 7.98594 14.825 8.17344C14.6375 8.36094 14.4188 8.45469 14.1688 8.45469C13.9188 8.45469 13.7 8.36094 13.5125 8.17344L8.00004 2.66094Z' fill='%23FF4E46'/%3E%3C/svg%3E%0A");
+                }    
+                header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+                    padding: 10px var(--wrapper-margin) 10px var(--wrapper-margin);
+                    display: none;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li { 
+                    border-bottom: 1px solid var(--color-line2);
+                }
+                header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child {
+                    border-bottom: none;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+                    display: block;
+                    padding: 7px 0 7px 12px;
+                }
+                header .gnb .gnb_wrap .gnb_logo {
+                    position: absolute;
+                    left: var(--wrapper-margin);
+                    top: 0;
+                    width: clamp(145px, 20vw, 200px);
+                    height: var(--header-ver);
+                    background: url(../images/logo.svg) no-repeat center center / contain;
+                }
+                header .gnb .gnb_wrap .gnb_close {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: var(--header-ver);
+                    height: var(--header-ver);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                header .gnb .gnb_wrap .gnb_close i {
+                    display: block;
+                    width: 26.41%;
                 }
 
+                header.menu_mo .gnb .gnb_wrap{
+                   /* display: block;*/
+                   right: 0;
+                }
 }
-/*************끝 : 모바일 버전 메뉴*********/
+
 
 .visual {
     position: relative; /* ctrl_btn 정렬의 기준 */
@@ -281,6 +375,66 @@ header .util .mypage i {
                 width: 72px;
             }
 }
+
+.find {
+    background-color: var(--color-title);
+    color: var(--color-white);
+    padding: 151px 0 142px 0 ;
+}
+.find h2 {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-title);
+    text-align: center;
+}
+.find .tab_list {
+    margin: 32px 0 0 0;
+}
+.find .tab_list ul {
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+}
+.find .tab_list ul li button {
+    display: block;
+    padding: 6px 27px 7px 25px;
+    border-radius: 30px;
+    color: var(--color-white60);
+    font-size: var(--font-size-title2);
+    font-weight: var(--font-weight-bold);
+}
+.find .tab_list ul li.active button {
+    background-color: var(--color-main);
+    color: var(--color-white);
+}
+.find .tab_list ul li.item2.active button {
+    background-color: var(--color-main2);
+}
+.find .tab_content {
+    margin: 22px 0 0 0;
+}
+.find .tab_content .ctrl_btn {
+    margin: 98px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.find .tab_content .ctrl_btn .prev i,
+.find .tab_content .ctrl_btn .next i ,
+.find .tab_content .ctrl_btn .more i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--color-white40);
+    border-radius: 50%;
+    fill: var(--color-white);
+}
+
+
+
+
+
 
 
 footer {

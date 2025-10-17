@@ -70,7 +70,7 @@ $(document).ready(function(){
     });
     /************************ 끝 :: visual swiper ***************/
 
-
+   
 
 
     /************************ 시작 :: pc버전 메뉴 오버 ***************
@@ -85,11 +85,16 @@ $(document).ready(function(){
         //console.log('오버했음')
         $('header').addClass('menu_pc')
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+        $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2').hide()
         $(this).addClass('over')
+        $(this).find('depth2').slideDown()
         }   
     })
     $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter', function(){
+        if(device_status == 'pc'){
         $(this).removeClass('over')
+        $(this).find('depth2').hide()
+        }
     })
     
     $('header').on('mouseenter focusout', function(){
@@ -102,4 +107,86 @@ $(document).ready(function(){
 
 
     /************************ 끝 :: pc버전 메뉴 오버 ***************/
+    $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
+        if(device_status == 'mobile'){
+            e.preventDefault();	
+            if($(this).parent().hasClass('open') == true){
+                //console.log('열림')
+                $(this).parent().removeClass('open')
+                $(this).next().slideUp()
+            }else{
+                //console.log('닫힘')
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2').slideUp()
+                $(this).parent().addClass('open')
+                $(this).next().slideDown()
+                
+            }
+        }  
+    })
+
+    let scrolling
+    
+    function scroll_chk(){
+        scrolling = $(window).scrollTop()
+        if( scrolling > 0){
+            $('header').addClass('fixed')
+        }else
+        $('header').removeClass('fixed')
+    }
+
+    scroll_chk()
+    $(window).scroll(function(){
+        scroll_chk()
+    })
+    /***********모바일 메뉴 열기 ***********/
+    //header .gnb .gnb_open
+    //header .gnb .gnb_wrap .gnb_close
+    $('header .gnb .gnb_open').on('click',function(){
+        $('header').addClass('menu_mo')
+    })
+    $('header .gnb .gnb_wrap .gnb_close').on('click',function(){
+        $('header').removeClass('menu_mo')
+    })
+    /***********모바일 메뉴 닫기***********/
+
+
+
+
+    /***********찾습니다 시작***********/
+
+    const find1_swiper = new Swiper('.find .item1 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 4,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+                spaceBetween: 24,
+            },
+        },
+        //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .item1 .next',
+            prevEl: '.find .item1 .prev',
+        },
+    });
+    const find2_swiper = new Swiper('.find .item2 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 4,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+                spaceBetween: 24,
+            },
+        },
+        //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .item2 .next',
+            prevEl: '.find .item2 .prev',
+        },
+    });
+    /***********찾습니다 끝***********/
+
 })//맨끝
