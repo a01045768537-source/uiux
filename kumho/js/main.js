@@ -59,8 +59,4 @@ $(document).ready(function(){
         service_name = $(this).attr()
     })
 
-
-
-
-
 })//밑끝
