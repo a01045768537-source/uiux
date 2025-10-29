@@ -11,3 +11,8 @@
 @import url(common.css);
 @import url(layout.css);
 @import url(contents.css);
+
+.snb .visual {
+    height: 369px;
+    background: url(../images/);
+}

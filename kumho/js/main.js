@@ -73,5 +73,8 @@ $(document).ready(function(){
     $('.service .list').on('mouseleave', function(){
         $('.service .list').attr('data-bg', '')
     })
-    
+
+    $(document).ready( function(){
+        const $menu_wtap = $('.snb, ul')
+    })
 })//밑끝
