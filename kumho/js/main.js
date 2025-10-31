@@ -74,7 +74,4 @@ $(document).ready(function(){
         $('.service .list').attr('data-bg', '')
     })
 
-    $(document).ready( function(){
-        const $menu_wtap = $('.snb, ul')
-    })
 })//밑끝
