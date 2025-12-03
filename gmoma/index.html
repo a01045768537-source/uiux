@@ -7,98 +7,236 @@
     <title>경기도미술관</title>
 </head>
 <body>
-    <div id="wrap">
-        <header> 
-        <div class="wrapper">
-            <h1 class="logo"><img src="images/contents/exhibit00.jpg" alt="작은 것으로부터"></h1>
-            <div class="header_cont">
-                <nav class="gnb">
-                    <ul>
-                        <li><a href="#n">관람</a></li>
-                        <li><a href="#n">전시/행사</a></li>
-                        <li><a href="#n">배움/참여</a></li>
-                        <li><a href="#n">소장품</a></li>
-                        <li><a href="#n">연구</a></li>
-                    </ul>
-                </nav>
-                <div class="search"></div>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="placeholder-logo.png" alt="경기도미술관 로고" width="30" height="30">
+                <span>경기도미술관</span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">관람</a></li>
+                    <li><a href="#">전시/행사</a></li>
+                    <li><a href="#">배움/참여</a></li>
+                    <li><a href="#">소장품</a></li>
+                    <li><a href="#">연구</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <img src="placeholder-search.svg" alt="검색" width="20" height="20">
             </div>
         </div>
-        </header>
+    </header>
 
-        <section class="exhibit">
-            <div class="wrapper">
-                <div class="photo"><img src="" alt=""></div>
-                <div class="tit">
-                    <div class="inner">
-                        <h2>작은 것으로부터</h2>
-                        <p>전시 기간 : 2025. 11. 19. ~ 2026. 02. 22.</p>
-                    </div><!--inner-->
-                    <a href="#n">전시 예약 바로가기</a>
-                </div><!--tit-->
-            </div><!--wrapper-->
-        </section><!--exhibit-->
+    <main class="container">
+        <section class="main-banner">
+            <div class="banner-image-container">
+                <img src="images/main-image.jpg" alt="메인 전시 이미지: 양산을 쓴 여인" class="banner-image">
+            </div>
+            <div class="banner-info">
+                <span class="exhibition-title-small">작은 것으로부터</span>
+                <p class="exhibition-duration">전시 기간: 2025. 11. 19. ~ 2026. 02. 22.</p>
+                <button class="reserve-btn">전시 예약 바로가기</button>
+            </div>
+        </section>
 
-        <section class="art">
-            <div class="wrapper">
-                <div class="tit">
-                    <div class="inner">
-                    <h2>미술품</h2>
-                    <p></p>
-                    </div><!--inner-->
-                    <a href="#n">더보기</a>
-                </div><!--tit-->
-                <div class="list">
-                    <ul>
-                        <li>
-                            <a href="#n">
-                                <div class="photo"><img src="" alt=""></div>
-                                <h3></h3>
-                                <p></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <div class="photo"><img src="" alt=""></div>
-                                <h3></h3>
-                                <p></p> 
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--list-->
-            </div><!--wrapper-->
-        </section><!--art-->
+        <section class="artworks">
+            <div class="section-header">
+                <h2>미술품</h2>
+                <button class="more-btn">더보기 +</button>
+            </div>
+            <p class="section-description">당신의 해석의 작품을 완성합니다.</p>
+            <div class="artwork-list">
+                <div class="artwork-item">
+                    <img src="placeholder-artwork1.jpg" alt="작품 이미지 1" class="artwork-img">
+                    <p class="artwork-title">사랑의 원형적 뼈대</p>
+                    <p class="artwork-duration">전시 기간: 2025. 11. 18. ~ 2025. 12. 07.</p>
+                </div>
+                <div class="artwork-item">
+                    <img src="placeholder-artwork2.jpg" alt="작품 이미지 2" class="artwork-img">
+                    <p class="artwork-title">장년 생존기</p>
+                    <p class="artwork-duration">전시 기간: 2025. 11. 13. ~ 2025. 12. 21.</p>
+                </div>
+                <div class="artwork-item">
+                    <img src="placeholder-artwork3.jpg" alt="작품 이미지 3" class="artwork-img">
+                    <p class="artwork-title">비(非)물질: 표현과 생각 사이의 틈</p>
+                    <p class="artwork-duration">전시 기간: 2025. 03. 30. ~ 2026. 02. 22.</p>
+                </div>
+                <div class="artwork-item">
+                    <img src="placeholder-artwork4.jpg" alt="작품 이미지 4" class="artwork-img">
+                    <p class="artwork-title">경기도미술관 상설전시 (엄허서식)</p>
+                    <p class="artwork-duration">전시 기간: 2023. 09. 15. ~</p>
+                </div>
+            </div>
+        </section>
 
-        <section class="edu">
-            <div class="wrapper">
-                <h2>배움/참여</h2>
-                <div class="list">
-                    <div class="swiper">
-                            <ul class="swiper-wrapper">
-                                <li class="swiper-slide">
-                                        <div class="photo_wrap">
-                                            <div class=”photo”><img src="" alt=””></div>
-                                            <div class="btn_wrap">
-                                                <a href="#n" class="view">상세보기</a>
-                                                <a href="#n" class="apply">신청하기</a>
-                                            </div><!--btn_wrap-->
-                                        </div><!--photo_wrap-->
-                                    <div class="txt_wrap">
-                                        <div class="subject">
-                                            <h3></h3>   
-                                            <a href="#n" class="more">더보기</a>
-                                        </div><!--subject-->
-                                        <p></p>
-                                    </div><!--txt_wrap-->
-                                </li><!--swiper-slid-->
-                                <li class="swiper-slide"> -- 4개 반복해서 코딩
-                                </li><!--swiper-slide-->
-                            </ul><!--swiper-wrapper-->
-                    </div><!--swiper-->
-                    <div class="paging"></div>
-                </div><!--list-->
-            </div><!--wrapper-->
-        </section><!--edu-->
-    </div>
+        <hr class="divider">
+
+        <section class="learn-join">
+            <div class="section-header">
+                <h3>배움/참여</h3>
+                <button class="more-btn">더보기 +</button>
+            </div>
+            <div class="program-detail">
+                <div class="program-main-image">
+                    <img src="placeholder-program-main.jpg" alt="프로그램 메인 이미지" class="program-img">
+                </div>
+                <div class="program-info-box">
+                    <p class="program-title-small">감각 : 작업 감상 교육</p>
+                    <p class="program-duration">전시 기간: 2025-03-01 ~ 2025-11-21(금)</p>
+                    <p class="program-description">
+                        다(多)가문화적 배경의 이해와 참여자 간의 소통 및 공감 능력 함양을 위해 고안된 교육 프로그램입니다. 
+                        특히 현대미술에 대해 다양한 접근으로 작품을 이해하고 미적 감각을 키우는 기회를 제공합니다.
+                        특히 현대미술에 대해 다양한 접근으로 작품을 이해하고 미적 감각을 키우는 기회를 제공합니다.
+                        전시 연계 교육 프로그램으로 작가가 들려주는 작품 이야기를 들어 볼 수 있습니다.
+                        <br><br>
+                        많은 관심 바랍니다.
+                    </p>
+                    <div class="program-buttons">
+                        <button class="apply-btn">신청하기</button>
+                        <button class="detail-btn">자세히 보기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="program-list">
+                <div class="program-item">
+                    <img src="placeholder-program1.jpg" alt="프로그램 이미지 1" class="program-img">
+                    <p class="program-title-small">초미주의주 공공미술사</p>
+                </div>
+                <div class="program-item">
+                    <img src="placeholder-program2.jpg" alt="프로그램 이미지 2" class="program-img">
+                    <p class="program-title-small">번지위의 미술론</p>
+                </div>
+                <div class="program-item">
+                    <img src="placeholder-program3.jpg" alt="프로그램 이미지 3" class="program-img">
+                    <p class="program-title-small">병풍 속을 그린 2인기</p>
+                </div>
+                <div class="program-item">
+                    <img src="placeholder-program4.jpg" alt="프로그램 이미지 4" class="program-img">
+                    <p class="program-title-small">감각교육 : 박수민(22th) 외1인, 한난국 크래팀</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="events">
+            <h2>행사</h2>
+            <div class="event-list">
+                <div class="event-item">
+                    <img src="placeholder-event1.jpg" alt="행사 이미지 1" class="event-img">
+                    <p class="event-title-small">11월 문화가 있는 날</p>
+                    <p class="event-duration">전시 기간: 2025. 11. 12. ~ 2025. 11. 29.</p>
+                </div>
+                <div class="event-item">
+                    <img src="placeholder-event2.jpg" alt="행사 이미지 2" class="event-img">
+                    <p class="event-title-small">2025 경기도미술관 미술대상 11월</p>
+                    <p class="event-duration">전시 기간: 2025. 11. 05. ~ 2025. 11. 30.</p>
+                </div>
+                <div class="event-item">
+                    <img src="placeholder-event3.jpg" alt="행사 이미지 3" class="event-img">
+                    <p class="event-title-small">경기도미술관 19주년 기념 경기도 우수</p>
+                    <p class="event-duration">전시 기간: 2025. 10. 16. ~ 2025. 10. 31.</p>
+                </div>
+                <div class="event-item">
+                    <img src="placeholder-event4.jpg" alt="행사 이미지 4" class="event-img">
+                    <p class="event-title-small">10월 문화가 있는 날</p>
+                    <p class="event-duration">전시 기간: 2025. 10. 18. ~ 2025. 10. 31.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="collections-news">
+            <div class="collection-area">
+                <h2>소장품</h2>
+                <div class="collection-list">
+                    <div class="collection-item">
+                        <img src="placeholder-collection-tiger.png" alt="소장품 이미지: 호랑이" class="collection-img">
+                    </div>
+                </div>
+            </div>
+            <div class="news-area">
+                <div class="section-header">
+                    <h2>미술관 소식</h2>
+                    <button class="more-btn">더보기 +</button>
+                </div>
+                <ul class="news-list">
+                    <li>
+                        <a href="#">미술관 운영 공지 안내</a>
+                        <span class="date">2025. 10. 31</span>
+                    </li>
+                    <li>
+                        <a href="#">행위미술 <시선으로 삶의 소리> 신청 안내</a>
+                        <span class="date">2025. 07. 10</span>
+                    </li>
+                    <li>
+                        <a href="#">2025년 하반기 <경기 담기> 출판 세미나 11.23(목)</a>
+                        <span class="date">2025. 11. 05</span>
+                    </li>
+                    <li>
+                        <a href="#">도민 문화향유 기회 확대 및 미술 감각 활성화를 위한 컨퍼런스 메뉴얼</a>
+                        <span class="date">2025. 08. 09</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="icon-menu">
+            <div class="icon-item">
+                <img src="placeholder-customer-service.svg" alt="고객센터 아이콘" class="icon-img">
+                <p>고객센터</p>
+            </div>
+            <div class="icon-item">
+                <img src="placeholder-calendar.svg" alt="단체예약 아이콘" class="icon-img">
+                <p>단체예약</p>
+            </div>
+            <div class="icon-item">
+                <img src="placeholder-group.svg" alt="단체관람 아이콘" class="icon-img">
+                <p>단체관람</p>
+            </div>
+            <div class="icon-item">
+                <img src="placeholder-location.svg" alt="오시는길 아이콘" class="icon-img">
+                <p>오시는길</p>
+            </div>
+            <div class="icon-item">
+                <img src="placeholder-wifi.svg" alt="편의시설 아이콘" class="icon-img">
+                <p>편의시설</p>
+            </div>
+            <div class="icon-item">
+                <img src="placeholder-faq.svg" alt="FAQ 아이콘" class="icon-img">
+                <p>FAQ</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="placeholder-logo-white.png" alt="경기도미술관 로고" width="30" height="30">
+                <span>경기도미술관</span>
+            </div>
+            <div class="address-info">
+                <p>(15383) 경기도 안산시 단원구 동산로 208 (초지동)</p>
+                <p>(재)경기도문화재단 경기도미술관 문의 : 031 481 7000</p>
+            </div>
+            <div class="privacy-links">
+                <a href="#">개인정보처리방침</a>
+                <a href="#">경남/안성지구</a>
+                <a href="#">이용약관</a>
+                <a href="#">광명전시</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>COPYRIGHT © GGDF ALL RIGHTS RESERVED.</p>
+            <button class="top-btn">
+                <span class="arrow-up">^</span>
+            </button>
+        </div>
+    </footer>
 </body>
 </html>

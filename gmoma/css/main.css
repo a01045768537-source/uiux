@@ -1,6 +1,423 @@
 @import url(fonts.css);
 @import url(common.css);
+@import url(default.css);
 
-header .wrapper .header_cont {
+/* --- 헤더 (상단 메뉴) --- */
+.header {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.header-top {
+    width: 1000px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.logo img {
+    margin-right: 8px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    padding: 0 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.search-icon img {
+    /* 실제 돋보기 아이콘 경로로 대체 필요 */
+    opacity: 0.7;
+}
+
+/* --- 메인 배너 --- */
+.main-banner {
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.banner-image-container {
+    border: 2px solid #5a9ce7; /* 파란색 테두리 */
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    height: 350px; /* 이미지 높이 임의 설정 */
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-info {
+    text-align: right;
+}
+
+.exhibition-title-small {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.exhibition-duration {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.reserve-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* --- 공통 섹션 헤더 --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h2, .section-header h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.more-btn {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #f0f0f0;
+    margin: 40px 0;
+}
+
+/* --- 미술품 섹션 --- */
+.artworks {
+    margin-bottom: 40px;
+}
+
+.section-description {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.artwork-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.artwork-item {
+    flex: 1;
+    max-width: 25%;
+    text-align: center;
+}
+
+.artwork-img {
+    width: 100%;
+    height: 250px; /* 이미지 높이 통일 */
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.artwork-title {
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.artwork-duration {
+    font-size: 0.8em;
+    color: #999;
+}
+
+
+/* --- 배움/참여 섹션 --- */
+.learn-join {
+    margin-bottom: 40px;
+}
+
+.program-detail {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.program-main-image {
+    flex: 0 0 45%; /* 이미지 영역 비율 */
+}
+
+.program-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.program-info-box {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.program-title-small {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.program-duration {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.program-description {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.program-buttons button {
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.apply-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.detail-btn {
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.program-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.program-list .program-item {
+    flex: 1;
+}
+
+.program-list .program-img {
+    height: 180px; /* 이미지 높이 임의 설정 */
+    margin-bottom: 10px;
+}
+
+
+/* --- 행사 섹션 --- */
+.events {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.events h2 {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.event-list {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.event-item {
+    flex: 1;
+    max-width: 25%;
+    text-align: center;
+}
+
+.event-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.event-title-small {
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.event-duration {
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* --- 소장품 및 소식 섹션 --- */
+.collections-news {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.collection-area {
+    flex: 1;
+    max-width: 45%;
+}
+
+.collection-area h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.collection-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid #eee; /* 소장품 캐러셀 경계선 */
+}
+
+.news-area {
+    flex: 1;
+    max-width: 50%;
+}
+
+.news-list {
+    border-top: 2px solid #333;
+}
+
+.news-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+}
+
+.news-list li .date {
+    color: #999;
+    font-size: 0.85em;
+}
+
+/* --- 아이콘 메뉴 섹션 --- */
+.icon-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 40px;
+}
+
+.icon-item {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    /* 실제 아이콘 이미지 경로로 대체 필요 */
+}
+
+/* --- 푸터 (하단 정보) --- */
+.footer {
+    background-color: #3c3c3c; /* 어두운 배경 */
+    color: #aaa;
+    padding: 30px 0;
+    font-size: 0.85em;
+}
+
+.footer-content {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer-logo img {
+    margin-right: 8px;
+    /* 로고 이미지도 흰색 계열로 대체 필요 */
+}
+
+.address-info p {
+    margin-bottom: 5px;
+}
+
+.privacy-links a {
+    margin-right: 15px;
+    color: #aaa;
+}
+
+.footer-bottom {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.top-btn {
+    background-color: #5a9ce7; /* 파란색 버튼 */
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.arrow-up {
+    transform: translateY(-2px); /* 폰트 위치 미세 조정 */
+    display: block;
 }
